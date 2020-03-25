@@ -1,0 +1,149 @@
+intents:
+- enter_buy_currency
+- enter_amount
+- sell_currency1
+- enter_date
+- buy_currency1
+- enter_sell_currency
+- affirm
+- goodbye
+- get_exrate
+- greet
+- deny
+- nontrade
+- chitchat
+- enter_exchangerate
+- restart_chat
+entities:
+- amount
+- buy_currency
+- currency_pair
+- currency_unit
+- date
+- exchange_rate
+- sell_curency
+- sell_currency
+slots:
+  amount:
+    type: unfeaturized
+  buy_currency:
+    type: unfeaturized
+  currency_pair:
+    type: unfeaturized
+  currency_unit:
+    type: unfeaturized
+  date:
+    type: unfeaturized
+  exchange_rate:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  sell_currency:
+    type: unfeaturized
+templates:
+  action_restart:
+  - text: restart for new conversation
+  - text: starting of new conversation
+  utter_ask_amount:
+  - text: What is the amount you are looking for?
+  - text: What's the order amount?
+  utter_ask_buy_currency:
+  - text: Could you mention the buying currency
+  - text: Please enter the buying currency
+  - text: What is the buying currency
+  - text: Enter the missing buy currency
+  utter_ask_currency_unit:
+  - text: What will be the size for eg you can say 'mio' or 'mill' or 'm' or 'M' for
+      millions
+  - text: What will be the size for eg you can say 'bio' or 'bill' or 'BIO' fro billions
+  - text: What will be the size for eg you can say 'tio' or 'TRi' or 'TIO' fro trillions
+  - text: Please enter the size of the amount you want to purchase.
+  utter_ask_date:
+  - text: When would you like to place your order?
+  - text: The date is missing. Please enter the date you would like to execute the
+      trade
+  - text: Please enter the date, for executing the trade!.
+  utter_ask_exchange_rate:
+  - text: Exchange rate is missing.Please enter the exchange rate
+  - text: What is the exchange rate you are looking for?
+  - text: Provide the missing exchange rate
+  utter_ask_sell_currency:
+  - text: Could you mention the selling currency
+  - text: Enter the selling currency
+  - text: What is the selling currency?
+  - text: Enter the missing sell currency
+  utter_askanything:
+  - text: Is there anything else I can help you with?
+  utter_askchoice:
+  - text: Do you want to buy or sell?
+  utter_chitchat:
+  - text: I am doing great. How about you?
+  - text: Thanks for asking. How are you doing today?
+  - text: ohhh I am well, thanks for asking.. Hope everything is going well with you.
+  utter_confirm:
+  - text: "Confirmed the order for \nAmount- {amount}\nCurrency unit- {currency_unit}\n\
+      Buy Currency- {buy_currency} \nSell Currency- {sell_currency}\nExchange Rate-{exchange_rate}\n\
+      Date-{date}"
+  - text: "Your order is confirmed for Amount- {amount} \nCurrency unit- {currency_unit}\
+      \ \nBuycurrency- {buy_currency} \nSell currency- {sell_currency} \nExchange\
+      \ Rate- {exchange_rate} \nDate-{date}"
+  utter_default:
+  - text: I am not very sure what you said.
+  - text: Maybe I didn't understand you properly.Could you please reword your question
+      or type your complete query?
+  - text: I didn't get what you said. Can you please rephrase the query?
+  - text: A little lost. Apologies. Could you rephrase?
+  - text: I've dropped the ball. Could you rephrase?
+  - text: Oops. Signal fuzzy. Could you rephrase?
+  utter_denying_exrate:
+  - text: My apologies, Cannot provide the exchange rate later than spot
+  - text: Sorry I can give exchange rate only for spot.
+  utter_exrate:
+  - text: "The exchange rate is {exchange_rate} for {buy_currency} to {sell_currency}.\n\
+      \ Would you like to go ahead with the order?"
+  utter_goahead:
+  - text: Please go ahead and place your order
+  utter_goodbye:
+  - text: Thanks for the trade!.Have a great day.Bye!
+  - text: Thanks for your order and have a nice day.
+  - text: Thanks and bye!
+  utter_nontrade:
+  - text: I am here to help you with trade realated questions and helping in placeing
+      the fx orders
+  - text: Maybe I did not get what you said? Is this realated to fx trade???
+  - text: My apologies.. I can answer trade related queries.
+  utter_thanksforenquiry:
+  - text: "Happy to help!.\nhave a good day.."
+  - text: Thanks for using fx-bot.Looking forward to your forex orders.
+  utter_verify_tradeorder:
+  - text: Please confirm the trade for '{amount} {currency_unit} {buy_currency} ag
+      {sell_currency} {exchange_rate} for {date}.
+  - text: You have ordered the trade for '{amount} {currency_unit} {buy_currency}
+      ag {sell_currency} {exchange_rate} for {date}.Please confirm
+  - text: Can you confirm the trade for '{amount} {currency_unit} {buy_currency} ag
+      {sell_currency} {exchange_rate} for {date}.
+actions:
+- get_exchange_rate
+- sep_currency
+- utter_ask_amount
+- utter_ask_buy_currency
+- utter_ask_currency_unit
+- utter_ask_date
+- utter_ask_exchange_rate
+- utter_ask_sell_currency
+- utter_askanything
+- utter_askchoice
+- utter_chitchat
+- utter_confirm
+- utter_default
+- utter_denying_exrate
+- utter_exrate
+- utter_goahead
+- utter_goodbye
+- utter_nontrade
+- utter_thanksforenquiry
+- utter_verify_tradeorder
+- welcome_user
+- action_slot_reset
+forms:
+- order_form
